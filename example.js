@@ -6,8 +6,8 @@ module.exports = function() {
     // attach a connection to APP.mongodb
     .use('mongodb', 'mongodb://localhost/foobar')
 
-    // create 2 connections and attach them as an object to APP.redis
-    // this will create APP.redis.cache and APP.redis.sessions
+    // create 2 connections and attach them as an object to APP.mongodb
+    // this will create APP.mongodb.users and APP.mongodb.data
     .use('mongodb', {
       users: '$mongodb.users',
       data: '$mongodb.data'
@@ -18,7 +18,7 @@ module.exports = function() {
     .use('mongodb', {
       users: {url: '$mongodb.users', db: {
         wtimeout: 2000,
-        native_parser: true
+        authSource: 'other-db'
       }},
       data: {url: 'mongodb://localhost/data', server: {
         reconnectTries: 2,
