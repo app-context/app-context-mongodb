@@ -1,0 +1,21 @@
+{
+  "name": "app-context-mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB initializer for app-context",
+  "keywords": [
+    "app-context",
+    "mongodb"
+  ],
+  "homepage": "https://github.com/app-context/app-context-mongodb",
+  "bugs": {
+    "url": "https://github.com/app-context/app-context-mongodb/issues"
+  },
+  "license": "MIT",
+  "author": "Matt Insler <matt.insler@gmail.com>",
+  "main": "lib/app-context-mongodb",
+  "repository": "app-context/app-context-mongodb",
+  "dependencies": {
+    "@mattinsler/app-context-create-connections": "0.0.1",
+    "mongodb": "2.0.42"
+  }
+}
